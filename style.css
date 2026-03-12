@@ -1,0 +1,413 @@
+body {
+
+    background: #F4F4F4;
+    margin:0;
+
+}
+
+.link_title {
+
+    text-decoration: none;
+    font-size: 24px;
+    color: #444444;
+
+}
+
+.container{
+
+    width: 780px;
+    margin: 0 auto;
+    background: #FFF;
+
+}
+
+.header {
+
+    padding: 45px 0 20px 40px;
+    border: 2px solid black;
+
+}
+
+.menu {
+
+    background: #3b7687;
+    padding: 6px 0 6px 40px;
+
+}
+
+.menu a {
+
+    color: #c5d6db;
+    text-decoration: none; 
+    font-size: 14px;
+    /* font-family: "Arial Narrow", "Myraid Pro"; */
+}
+
+.menu a:hover {
+
+    color: #ecf2f3;
+
+}
+
+aside {
+
+    float: left;
+    width: 120px;
+    padding: 30px 10px 0 40px; /* top right left bottom*/
+
+}
+
+h1 {
+
+    margin: 0px;
+    color: #869843;
+    font-size: 24px;
+    font-family: one;
+    font-weight: normal;
+
+}
+
+h1:hover {
+    
+    color: #aac253; 
+
+}
+
+h2 {
+
+    color: #3b7687;
+    font-size: 15px;
+    margin: 20px 0 5px 0;
+
+
+}
+
+.main {
+
+    margin: 0 0 0 180px;
+    padding: 35px 40px 30px 0;
+    color: #444444;
+    font-family: "Georgia";
+    font-size: 13px;
+    line-height: 18px;
+    text-emphasis: justify;
+}
+
+.main a:hover {
+
+    color: #444444;
+
+
+}
+
+#home-image {
+
+    width: 100%;
+    height: auto; /* best practice to keep the aspect ratio*/
+}
+
+footer {
+
+    padding: 6px 40px 6px 40px;
+    background: #d6d6d6;
+    font-family: "Lucida Sans Unicode";
+    color: #444444;
+    font-size: 11px;
+    text-decoration: right;
+    text-align: center;
+}
+
+footer a {
+
+    text-decoration: none; /*You can also just make a{} and but text decoration none*/
+    color:#262626;
+
+}
+
+.separator {
+
+    color: #FFFFFF;
+    font-size: 11px;
+
+}
+
+/*About Page Styles*/
+
+#about_page #home-image{
+
+    width:70%;
+    height: auto;
+    float: left;
+    display: block;
+
+}
+
+#about_page #home-image img {
+
+    width: 100%;
+    height: auto;
+
+}
+
+#about_page #profile-info {
+
+    float: right;
+    width: 25%;
+    text-align: left;
+}
+
+
+
+#about_page .description {
+
+    clear: both;
+    padding-top: 20px;
+
+}
+
+/*Contact page*/
+
+.form {
+
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.col, #text {
+
+    float:left;
+    width: 220px;
+
+}
+
+.col label, #text {
+    color: #01252f;
+    display: block; 
+    margin-top: 10px;
+    font-weight: bold;
+
+
+}
+
+.messages {
+
+    float: left;
+    margin-left: 20px;
+    color: #01252f;
+    font-weight: bold;
+
+}
+
+#text {
+
+    width: 300px;
+    height: 120px;
+    display: block;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease;
+    outline: none;
+
+}
+
+.messages label {
+    display: block;
+    margin-top: 10px;
+}
+
+#name_box, #email_box, #subject_box , #text{ 
+
+    border-radius: 10px;
+    border-color: 2px solid #ccc;
+    border-width: 5px;
+    transition: all 0.3s ease;
+    width: 180px;
+    outline: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+#name_box:focus, #email_box:focus, #subject_box:focus {
+        
+    border-color: #3b7687;  
+    width: 220px;
+    background-color:#444546;
+
+}
+
+#text {
+
+    width: 300px;
+    height: 120px;
+    margin-top: 5px;
+
+}
+
+ #text:focus {
+    
+    border-color: #3b7687;
+    height: 200px;
+
+}
+
+.form label:hover {
+
+    color:#0b669b;
+    cursor: pointer;
+}
+
+#name_box::placeholder, 
+#email_box::placeholder, 
+#subject_box::placeholder, 
+#text::placeholder {
+
+    color: #bababa;
+    font-style: italic;
+    font-size: 12px;
+}
+
+#change {
+
+    font-style: italic;
+    margin-top: 5px;
+    float: right;
+    margin-right: 100px;
+    border: 5px solid #444546;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 100px;
+
+}
+
+body {
+    background: #F4F4F4;
+    transition: all 1s ease; /* Makes the switch smooth! */
+}
+
+body.dark-mode #name_box, 
+body.dark-mode #email_box, 
+body.dark-mode #subject_box, 
+body.dark-mode #text {
+    background-color: #444444;
+    color: #FFFFFF;
+    border: 2px solid #555555;
+}
+
+/* Dark Mode (Add this to the bottom of your CSS) */
+body.dark-mode {
+    background: #222222;
+}
+
+body.dark-mode .container {
+    background: #333333;
+    color: white;
+}
+
+body.dark-mode .main {
+    color: #cccccc;
+}
+
+body.dark-mode .menu {
+    background: #234751;
+}
+
+body.dark-mode footer {
+    background: #1a1a1a;
+    color: #ccc;
+
+}
+
+#name_box:focus, #email_box:focus, #subject_box:focus, #messages:focus {
+    
+    border-color: #3b7687;
+    width: 220px;
+    outline: none;
+    background-color: #FFFFFF; /* Forces it to stay light when focused */
+    color: #000000;
+
+
+}
+
+body.dark-mode input:focus, 
+body.dark-mode textarea:focus {
+    background-color: #555555 !important;
+    color: #000000 !important;
+
+}
+
+body.dark-mode .form label {
+    
+    color:#0b669b;
+
+}
+
+body.dark-mode .form label:hover {
+    
+    color:#0a86cf;
+    cursor: pointer;
+}
+
+#submit button {
+
+    margin-left: 175px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: #83928d;
+    border: 2px solid #83928d;
+    border-radius: 10px;
+    cursor: pointer;
+
+
+}
+
+#submit button:hover{
+    
+    background-color: #616564;
+
+}
+
+body.dark-mode #submit button{
+    
+    background-color: #616564;
+
+}
+
+body.dark-mode #submit button:hover{
+    
+    background-color: #292727;
+
+}
+
+body.dark-mode .link_title{
+
+    color:#5f5858;
+
+}
+body.dark-mode .link_title:hover{
+
+    color:#847d7d;
+
+}
+
+#move {
+
+    padding-top: 200px;
+
+
+
+}
+
+.container {
+
+    box-shadow: 1px 2px 3px 2px;
+
+}
+
+
