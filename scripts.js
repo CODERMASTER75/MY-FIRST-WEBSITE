@@ -27,4 +27,9 @@ window.onload = function() {
             updateButtonUI(isDark);
         };
     }
+    const darkButton = document.getElementById('change');
+
+    darkButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    });
 };
