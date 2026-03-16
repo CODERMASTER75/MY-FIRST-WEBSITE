@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="js/scripts.js"></script>
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
     <title>About Us</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/scripts.js"></script>
 </head>
 <body id="about_page">
     <div class="container">
