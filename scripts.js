@@ -1,23 +1,30 @@
 window.onload = function() {
     const myBox = document.getElementById('change');
+    const modeText = document.getElementById('mode-text');
+
+    // Function to keep the button text/border in sync with the mode
+    function updateButtonUI(isDark) {
+        if (modeText) modeText.innerText = isDark ? "Light Mode" : "Dark Mode";
+        if (myBox) {
+            myBox.style.color = isDark ? "white" : "#444546";
+            myBox.style.borderColor = isDark ? "white" : "#444546";
+        }
+    }
+
+    // On page load, check if the <html> already has the class from the head script
+    const isCurrentlyDark = document.documentElement.classList.contains('dark-mode');
+    updateButtonUI(isCurrentlyDark);
 
     if (myBox) {
         myBox.onclick = function() {
-            // 1. Flip the switch on the background
-            document.body.classList.toggle('dark-mode');
+            // 1. Toggle the class on the ROOT (html tag)
+            const isDark = document.documentElement.classList.toggle('dark-mode');
             
-            // 2. Check if the switch is now "on" or "off"
-            if (document.body.classList.contains('dark-mode')) {
-                // The background is now BLACK, so tell the user
-                myBox.innerHTML = "<p>Light Mode</p>";
-                myBox.style.color = "white"; // Make button text visible
-                myBox.style.borderColor = "white";
-            } else {
-                // The background is now LIGHT, so tell the user
-                myBox.innerHTML = "<p>Dark Mode</p>";
-                myBox.style.color = "#444546"; // Reset button text color
-                myBox.style.borderColor = "#444546";
-            }
+            // 2. Save the choice to the notebook
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            // 3. Update the button visuals
+            updateButtonUI(isDark);
         };
     }
 };
